@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>if文</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+  $(function(){
+    // ここに処理を記述
+    $("#button").on("click", function(){
+        var text = $("#value").val();
+        if (text === "1") {
+            $("#box").css("background-color", "red");
+        } else if (text === "2") {
+            $("#box").css("background-color", "#00F50A");
+        } else if (text === "3") {
+            $("#box").css("background-color", "blue");
+        } else {
+            $("#box").css("background-color", ""); 
+        }
+    });
+  });
+  // 数値（１〜３）入力＋クリック
+  // １の時は赤
+  // ２の時は緑
+  // ３の時は青
+  // 他の時は元に戻す？に設定する　→ if文
+
+  </script>
+</head>
+<body>
+  <input type="text" id="value">
+  <input type="button" id="button" value="ボタン">
+  <div id="box">
+  </div><!-- button -->
+</body>
+</html>
